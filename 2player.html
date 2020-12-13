@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Shavalan 2Players</title>
+	</head>
+	<body>
+		<iframe src="index.html" style="width:800px;height:700px;padding:0px 0px;margin:auto auto;transform:rotate(90deg);position:relative;left:10;top:10;"></iframe>
+		<iframe src="index.html" style="width:800px;height:700px;padding:0px 0px;margin:auto auto;transform:rotate(90deg);position:relative;left:10;top:110;"></iframe>
+		<script>
+			function sendKey(event,type) {
+				var iframes=document.getElementsByTagName("iframe");
+				console.log("iframes.length="+iframes.length);
+				for (var i=0;i<iframes.length;i++) {
+					iframes[i].contentWindow.postMessage([type,event.keyCode],"*");
+					console.log("Sent keyevent");
+				}
+			}
+			window.addEventListener("keydown",function(ev){sendKey(ev,"keydown")});
+			window.addEventListener("keyup",function(ev){sendKey(ev,"keyup")});
+			window.addEventListener("keypress",function(ev){sendKey(ev,"keypress")});
+		</script>
+	</body>
+</html>

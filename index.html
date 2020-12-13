@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html style="overflow:hidden;">
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=0.2, maximum-scale=4, user-scalable=0"/>
+  <script src="logic.js"></script>
+  <script src="main.js"></script>
+  <title>Shavalan</title>
+ </head>
+ <body onload="onLoaded()" bgcolor="#505050" style="text-align:center;overflow:hidden;">
+  <noscript style="margin:0 auto">No JavaScript enabled, can't play</noscript>
+  <canvas bgcolor="#FFFFFF" id="gameCanvas" width="800" height="600" style="width:800px;height:600px; border:1px solid black; margin:0px 0px;">No HTML5</canvas>
+  <img src="res/music.png" id="musicButton" align="right" style="width:2cm; height:2cm; display:block;">
+  
+  <audio id="DreamsOfAbove" hidden="true" preload="auto">
+   <source src="res/dreamsOfAbove.ogg" type="audio/ogg">
+   <source src="res/dreamsOfAbove.mp3" type="audio/mpeg">
+   No AUDIO! C'mon get a <a href="http://www.google.com/chrome/">better browser</a>
+  </audio>
+  <audio id="LowOrbitDriftMOON" hidden="true" preload="auto">
+   <!--source src="res/lowOrbitDriftMoon.ogg" type="audio/ogg"  For some reason can't convert this track to OGG-->
+   <source src="res/lowOrbitDriftMoon.webm" type="audio/webm"> <!--But WEBM works...-->
+   <source src="res/lowOrbitDriftMoon.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="clickSound" hidden="true" preload="auto">
+   <source src="res/click.wav" type="audio/wav">
+   <source src="res/click.mp3" type="audio/mpeg">
+  </audio>
+ </body>
+</html>
